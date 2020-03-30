@@ -78,6 +78,8 @@ void Level1Scene::draw()
 		m_pVirus9->draw();
 	if (!isCollected[9])
 		m_pVirus10->draw();
+
+	m_pDoor->draw();
 	
 	m_pPlayer->draw();
 
@@ -186,6 +188,7 @@ void Level1Scene::update()
 				m_pVirus8->setPosition(glm::vec2(m_pVirus8->getPosition().x - i, m_pVirus8->getPosition().y));
 				m_pVirus9->setPosition(glm::vec2(m_pVirus9->getPosition().x - i, m_pVirus9->getPosition().y));
 				m_pVirus10->setPosition(glm::vec2(m_pVirus10->getPosition().x - i, m_pVirus10->getPosition().y));
+				m_pDoor->setPosition(glm::vec2(m_pDoor->getPosition().x - i, m_pDoor->getPosition().y));
 			}
 		}
 		if (m_pPlayer->getPosition().y > 450)
@@ -251,6 +254,7 @@ void Level1Scene::update()
 				m_pVirus8->setPosition(glm::vec2(m_pVirus8->getPosition().x + i, m_pVirus8->getPosition().y));
 				m_pVirus9->setPosition(glm::vec2(m_pVirus9->getPosition().x + i, m_pVirus9->getPosition().y));
 				m_pVirus10->setPosition(glm::vec2(m_pVirus10->getPosition().x + i, m_pVirus10->getPosition().y));
+				m_pDoor->setPosition(glm::vec2(m_pDoor->getPosition().x + i, m_pDoor->getPosition().y));
 			}
 		}
 		if (!isCollected[0]) {
@@ -522,6 +526,9 @@ void Level1Scene::start()
 	m_InitialEndPoint = Config::SCREEN_WIDTH;
 
 	isDead = false;
+
+	m_pDoor = new Door();
+	m_pDoor->setPosition(glm::vec2(1500, 300));
 
 	TheSoundManager::Instance()->load("../Assets/audio/VirusPickUp.wav", "virusPickUp", SOUND_SFX);
 	TheSoundManager::Instance()->load("../Assets/audio/GameMusic.mp3", "gameSound", SOUND_MUSIC);

@@ -15,6 +15,7 @@ enum GameObjectType {
 	BASE,
 	VIRUS,
 	PLAY_AGAIN,
+	DOOR,
 	NUM_OF_TYPES
 };
 #endif /* defined (__GAME_OBJECT_TYPE__) */

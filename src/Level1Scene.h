@@ -9,6 +9,7 @@
 #include "Base.h"
 #include "Virus.h"
 #include "Label.h"
+#include "Door.h"
 
 class Level1Scene : public Scene
 {
@@ -54,6 +55,8 @@ private:
 
 	Label* m_pScoreLabel;
 	bool isDead;
+
+	Door* m_pDoor;
 };
 
 #endif /* defined (__LEVEL1_SCENE__) */

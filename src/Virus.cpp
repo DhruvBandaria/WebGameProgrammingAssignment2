@@ -7,8 +7,6 @@ Virus::Virus()
 					TheGame::Instance()->getRenderer());
 	setPosition(glm::vec2(200, 200));
 
-	std::cout << "Player on scene!" << std::endl;
-
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("virus");
 	setWidth(size.x);
 	setHeight(size.y);

@@ -5,7 +5,7 @@ PlayAgain::PlayAgain()
 	:Button(
 		"../Assets/textures/Buttons/PlayAgain.png",
 		"playAgain",
-		PLAY_AGAIN, glm::vec2(Config::SCREEN_WIDTH * 0.5f, Config::SCREEN_HEIGHT * 0.5f)), m_isClicked(false)
+		PLAY_AGAIN, glm::vec2(Config::SCREEN_WIDTH * 0.5f, Config::SCREEN_HEIGHT * 0.7f)), m_isClicked(false)
 {
 }
 

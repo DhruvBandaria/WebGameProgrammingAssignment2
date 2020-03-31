@@ -16,6 +16,8 @@ enum GameObjectType {
 	VIRUS,
 	PLAY_AGAIN,
 	DOOR,
+	START,
+	QUIT,
 	NUM_OF_TYPES
 };
 #endif /* defined (__GAME_OBJECT_TYPE__) */

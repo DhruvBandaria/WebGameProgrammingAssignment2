@@ -1,14 +1,14 @@
 #pragma once
-#ifndef __QUIT_BUTTON__
-#define __QUIT_BUTTON__
+#ifndef __QUIT__
+#define __QUIT__
 
 #include "Button.h"
 
-class QuitButton : public Button
+class Quit : public Button
 {
 public:
-	QuitButton();
-	~QuitButton();
+	Quit();
+	~Quit();
 
 
 	bool ButtonClick() override;

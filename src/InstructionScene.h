@@ -1,18 +1,16 @@
 #pragma once
-#ifndef __START_SCENE__
-#define __START_SCENE__
+#ifndef __INSTRUCTION_SCENE__
+#define __INSTRUCTION_SCENE__
 
 #include "Scene.h"
 #include "Label.h"
-#include "Instruction.h"
 #include "Start.h"
-#include "Quit.h"
 
-class StartScene final : public Scene
+class InstructionScene final : public Scene
 {
 public:
-	StartScene();
-	~StartScene();
+	InstructionScene();
+	~InstructionScene();
 
 	// Inherited via Scene
 	virtual void draw() override;
@@ -21,16 +19,16 @@ public:
 	virtual void handleEvents() override;
 	virtual void start() override;
 
-	glm::vec2 getMousePosition();
 private:
 	glm::vec2 m_mousePosition;
-	
-	Label* m_pStartLabel;
+	Label* m_pHeading;
+	Label* m_pText1;
+	Label* m_pText2;
+	Label* m_pText3;
+	Label* m_pText4;
+	Label* m_pText5;
 
 	Start* m_pStartButton;
-	Quit* m_pQuitButton;
-	Instruction* m_pInstructionButton;	
-	
 };
 
-#endif /* defined (__START_SCENE__) */
+#endif /* defined (__END_SCENE__) */#pragma once

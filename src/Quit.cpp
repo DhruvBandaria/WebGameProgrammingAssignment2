@@ -1,20 +1,19 @@
-#include "StartButton.h"
+#include "Quit.h"
 #include "Game.h"
 
-
-StartButton::StartButton()
+Quit::Quit()
 	:Button(
 		"../Assets/textures/Buttons/QuitButton.png",
-		"startButton1",
-		START_BUTTON1, glm::vec2(Config::SCREEN_WIDTH * 0.5f, Config::SCREEN_HEIGHT * 0.7f)), m_isClicked(false)
+		"quit",
+		GameObjectType::QUIT, glm::vec2(Config::SCREEN_WIDTH * 0.5f, Config::SCREEN_HEIGHT * 0.9f)), m_isClicked(false)
 {
 }
 
-StartButton::~StartButton()
+Quit::~Quit()
 {
 }
 
-bool StartButton::ButtonClick()
+bool Quit::ButtonClick()
 {
 	if (m_mouseOver() && m_mouseButtonClicked)
 	{

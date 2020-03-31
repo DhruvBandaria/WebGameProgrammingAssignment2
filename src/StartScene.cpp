@@ -15,16 +15,17 @@ void StartScene::draw()
 {
 	m_pStartLabel->draw();
 	m_pStartButton->draw();
-	m_pQuitButton->draw();
+	m_pInstructionButton->draw();
+	//m_pQuitButton->draw();
 }
 
 void StartScene::update()
 {
 	m_pStartButton->setMousePosition(m_mousePosition);
 	m_pStartButton->ButtonClick();
-	
-	m_pQuitButton->setMousePosition(m_mousePosition);
-	m_pQuitButton->ButtonClick();
+
+	m_pInstructionButton->setMousePosition(m_mousePosition);
+	m_pInstructionButton->ButtonClick();
 }
 
 void StartScene::clean()
@@ -33,7 +34,7 @@ void StartScene::clean()
 	
 	delete m_pStartLabel;
 	m_pStartLabel = nullptr;
-	removeAllChildren();
+	//removeAllChildren();
 }
 
 void StartScene::handleEvents()
@@ -59,7 +60,7 @@ void StartScene::handleEvents()
 			{
 			case SDL_BUTTON_LEFT:
 				m_pStartButton->setMouseButtonClicked(true);
-				m_pQuitButton->setMouseButtonClicked(true);
+				m_pInstructionButton->setMouseButtonClicked(true);
 				break;
 			}
 
@@ -69,7 +70,7 @@ void StartScene::handleEvents()
 			{
 			case SDL_BUTTON_LEFT:
 				m_pStartButton->setMouseButtonClicked(false);
-				m_pQuitButton->setMouseButtonClicked(false);
+				m_pInstructionButton->setMouseButtonClicked(true);
 				break;
 			}
 			break;
@@ -101,13 +102,9 @@ void StartScene::start()
 	m_pStartLabel->setParent(this);
 	addChild(m_pStartLabel);
 
-	m_pStartButton = new StartButton();
-	m_pStartButton->setParent(this);
-	addChild(m_pStartButton);
-	
-	m_pQuitButton = new QuitButton();
-	m_pQuitButton->setParent(this);
-	addChild(m_pQuitButton);
+	m_pStartButton = new Start();
+	m_pInstructionButton = new Instruction();
+	//m_pQuitButton = new Quit();
 
 	TheSoundManager::Instance()->load("../Assets/audio/MenuSound.mp3", "menuSound", SOUND_MUSIC);
 	TheSoundManager::Instance()->playMusic("menuSound", 0);

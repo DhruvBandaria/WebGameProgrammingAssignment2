@@ -1,13 +1,14 @@
 #pragma once
-#ifndef __START_BUTTON__
-#define __START_BUTTON__
+#ifndef __START__
+#define __START__
 
 #include "Button.h"
-class StartButton : public Button
+
+class Start : public Button
 {
 public:
-	StartButton();
-	~StartButton();
+	Start();
+	~Start();
 
 
 	bool ButtonClick() override;

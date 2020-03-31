@@ -329,6 +329,14 @@ void Level1Scene::update()
 		}
 
 		m_pScoreLabel->setText("Score:" + std::to_string(totalCollected) + "/10");
+
+		if(Collision::AABBCheckPlayer(m_pPlayer,m_pDoor))
+		{
+			if(totalCollected==10)
+			{
+				TheGame::Instance()->changeSceneState(WIN_SCENE);
+			}
+		}
 	}
 	else
 	{
@@ -528,7 +536,7 @@ void Level1Scene::start()
 	isDead = false;
 
 	m_pDoor = new Door();
-	m_pDoor->setPosition(glm::vec2(1500, 300));
+	m_pDoor->setPosition(glm::vec2(1550, 280));
 
 	TheSoundManager::Instance()->load("../Assets/audio/VirusPickUp.wav", "virusPickUp", SOUND_SFX);
 	TheSoundManager::Instance()->load("../Assets/audio/GameMusic.mp3", "gameSound", SOUND_MUSIC);

@@ -117,12 +117,6 @@
     <ClCompile Include="..\src\Button.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\QuitButton.cpp">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\StartButton.cpp">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Base.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
@@ -134,6 +128,24 @@
     </ClCompile>
     <ClCompile Include="..\src\Door.cpp">
       <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\InstructionScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Instruction.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Start.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Quit.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TempScene.cpp">
+      <Filter>Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -242,12 +254,6 @@
     <ClInclude Include="..\src\Button.h">
       <Filter>Game Objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\QuitButton.h">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\StartButton.h">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Base.h">
       <Filter>Game Objects</Filter>
     </ClInclude>
@@ -259,6 +265,24 @@
     </ClInclude>
     <ClInclude Include="..\src\Door.h">
       <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\InstructionScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Instruction.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Start.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Quit.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TempScene.h">
+      <Filter>Scenes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

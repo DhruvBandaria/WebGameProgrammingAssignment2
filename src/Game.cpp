@@ -4,6 +4,9 @@
 #include <iomanip>
 #include "glm/gtx/string_cast.hpp"
 #include "IMGUI_SDL/imgui_sdl.h"
+#include "WinScene.h"
+#include "InstructionScene.h"
+#include "TempScene.h"
 
 
 Game* Game::s_pInstance = nullptr;
@@ -95,7 +98,7 @@ void Game::start()
 {
 	m_currentSceneState = SceneState::NO_SCENE;
 
-	changeSceneState(SceneState::START_SCENE);
+	changeSceneState(SceneState::TEMP_SCENE);
 }
 
 SDL_Renderer * Game::getRenderer() const
@@ -148,8 +151,20 @@ void Game::changeSceneState(const SceneState new_state)
 			m_currentScene = new Level1Scene();
 			std::cout << "Level 1 scene activated" << std::endl;
 			break;
+		case SceneState::INSTRUCTION_SCENE:
+			m_currentScene = new InstructionScene();
+			std::cout << "Level 1 scene activated" << std::endl;
+			break;
 		case SceneState::PLAY_SCENE:
 			std::cout << "play scene activated" << std::endl;
+			break;
+		case SceneState::WIN_SCENE:
+			m_currentScene = new WinScene();
+			std::cout << "Win scene activated" << std::endl;
+			break;
+		case SceneState::TEMP_SCENE:
+			m_currentScene = new TempScene();
+			std::cout << "Temp scene activated" << std::endl;
 			break;
 		case SceneState::END_SCENE:
 			m_currentScene = new EndScene();

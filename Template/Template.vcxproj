@@ -171,6 +171,8 @@
     <ClCompile Include="..\src\Game.cpp" />
     <ClCompile Include="..\src\GameObject.cpp" />
     <ClCompile Include="..\src\Ground.cpp" />
+    <ClCompile Include="..\src\Instruction.cpp" />
+    <ClCompile Include="..\src\InstructionScene.cpp" />
     <ClCompile Include="..\src\Label.cpp" />
     <ClCompile Include="..\src\Level1Scene.cpp" />
     <ClCompile Include="..\src\main.cpp" />
@@ -179,16 +181,18 @@
     <ClCompile Include="..\src\Planet.cpp" />
     <ClCompile Include="..\src\PlayAgain.cpp" />
     <ClCompile Include="..\src\Player.cpp" />
-    <ClCompile Include="..\src\QuitButton.cpp" />
+    <ClCompile Include="..\src\Quit.cpp" />
     <ClCompile Include="..\src\Scene.cpp" />
     <ClCompile Include="..\src\ship.cpp" />
     <ClCompile Include="..\src\SoundManager.cpp" />
-    <ClCompile Include="..\src\StartButton.cpp" />
+    <ClCompile Include="..\src\Start.cpp" />
     <ClCompile Include="..\src\StartScene.cpp" />
     <ClCompile Include="..\src\Target.cpp" />
+    <ClCompile Include="..\src\TempScene.cpp" />
     <ClCompile Include="..\src\TextureManager.cpp" />
     <ClCompile Include="..\src\Util.cpp" />
     <ClCompile Include="..\src\Virus.cpp" />
+    <ClCompile Include="..\src\WinScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\IMGUI\imconfig.h" />
@@ -211,6 +215,8 @@
     <ClInclude Include="..\src\GameObjectType.h" />
     <ClInclude Include="..\src\Ground.h" />
     <ClInclude Include="..\src\Heuristic.h" />
+    <ClInclude Include="..\src\Instruction.h" />
+    <ClInclude Include="..\src\InstructionScene.h" />
     <ClInclude Include="..\src\Label.h" />
     <ClInclude Include="..\src\Level1Scene.h" />
     <ClInclude Include="..\src\Move.h" />
@@ -219,19 +225,21 @@
     <ClInclude Include="..\src\Planet.h" />
     <ClInclude Include="..\src\PlayAgain.h" />
     <ClInclude Include="..\src\Player.h" />
-    <ClInclude Include="..\src\QuitButton.h" />
+    <ClInclude Include="..\src\Quit.h" />
     <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\SceneState.h" />
     <ClInclude Include="..\src\ship.h" />
     <ClInclude Include="..\src\SoundManager.h" />
-    <ClInclude Include="..\src\StartButton.h" />
+    <ClInclude Include="..\src\Start.h" />
     <ClInclude Include="..\src\StartScene.h" />
     <ClInclude Include="..\src\SteeringState.h" />
     <ClInclude Include="..\src\Target.h" />
+    <ClInclude Include="..\src\TempScene.h" />
     <ClInclude Include="..\src\TextureManager.h" />
     <ClInclude Include="..\src\TileComparators.h" />
     <ClInclude Include="..\src\Util.h" />
     <ClInclude Include="..\src\Virus.h" />
+    <ClInclude Include="..\src\WinScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

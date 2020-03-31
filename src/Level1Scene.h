@@ -57,6 +57,7 @@ private:
 	bool isDead;
 
 	Door* m_pDoor;
+	
 };
 
 #endif /* defined (__LEVEL1_SCENE__) */

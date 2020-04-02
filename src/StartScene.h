@@ -26,10 +26,11 @@ private:
 	glm::vec2 m_mousePosition;
 	
 	Label* m_pStartLabel;
+	Label* m_pGuide;
 
 	Start* m_pStartButton;
+	Instruction* m_pInstruction;
 	Quit* m_pQuitButton;
-	Instruction* m_pInstructionButton;	
 	
 };
 

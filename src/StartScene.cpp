@@ -14,9 +14,10 @@ StartScene::~StartScene()
 void StartScene::draw()
 {
 	m_pStartLabel->draw();
+	m_pGuide->draw();
 	m_pStartButton->draw();
-	m_pInstructionButton->draw();
-	//m_pQuitButton->draw();
+	m_pInstruction->draw();
+	m_pQuitButton->draw();
 }
 
 void StartScene::update()
@@ -24,8 +25,12 @@ void StartScene::update()
 	m_pStartButton->setMousePosition(m_mousePosition);
 	m_pStartButton->ButtonClick();
 
-	m_pInstructionButton->setMousePosition(m_mousePosition);
-	m_pInstructionButton->ButtonClick();
+	m_pInstruction->setMousePosition(m_mousePosition);
+	m_pInstruction->ButtonClick();
+
+	m_pQuitButton->setMousePosition(m_mousePosition);
+	m_pQuitButton->ButtonClick();
+
 }
 
 void StartScene::clean()
@@ -60,7 +65,8 @@ void StartScene::handleEvents()
 			{
 			case SDL_BUTTON_LEFT:
 				m_pStartButton->setMouseButtonClicked(true);
-				m_pInstructionButton->setMouseButtonClicked(true);
+				m_pInstruction->setMouseButtonClicked(true);
+				m_pQuitButton->setMouseButtonClicked(true);
 				break;
 			}
 
@@ -70,7 +76,8 @@ void StartScene::handleEvents()
 			{
 			case SDL_BUTTON_LEFT:
 				m_pStartButton->setMouseButtonClicked(false);
-				m_pInstructionButton->setMouseButtonClicked(true);
+				m_pInstruction->setMouseButtonClicked(false);
+				m_pQuitButton->setMouseButtonClicked(false);
 				break;
 			}
 			break;
@@ -84,7 +91,7 @@ void StartScene::handleEvents()
 				TheGame::Instance()->changeSceneState(SceneState::LEVEL1_SCENE);
 				break;
 			case SDLK_2:
-				TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
+				TheGame::Instance()->changeSceneState(SceneState::INSTRUCTION_SCENE);
 				break;
 			}
 			break;
@@ -98,13 +105,18 @@ void StartScene::handleEvents()
 void StartScene::start()
 {
 	const SDL_Color blue = { 0, 0, 255, 255 };
-	m_pStartLabel = new Label("Corona Run", "Consolas", 80, blue, glm::vec2(400.0f, 40.0f));
+	m_pStartLabel = new Label("Corona Run", "Consolas", 80, blue, glm::vec2(400.0f, 140.0f));
 	m_pStartLabel->setParent(this);
 	addChild(m_pStartLabel);
 
+	const SDL_Color red = { 255, 0, 0, 255 };
+	m_pGuide = new Label("Shortcuts: 1 for start 2 for instruction and Esc for Quit", "Consolas", 10, red, glm::vec2(200.0f, 20.0f));
+	m_pGuide->setParent(this);
+	addChild(m_pGuide);
+
 	m_pStartButton = new Start();
-	m_pInstructionButton = new Instruction();
-	//m_pQuitButton = new Quit();
+	m_pInstruction = new Instruction();
+	m_pQuitButton = new Quit();
 
 	TheSoundManager::Instance()->load("../Assets/audio/MenuSound.mp3", "menuSound", SOUND_MUSIC);
 	TheSoundManager::Instance()->playMusic("menuSound", 0);
